@@ -45,7 +45,7 @@ from sqlalchemy.ext.asyncio import (
 )
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
 
-# Load environment variables
+# Load environment variablesfrom dotenv import load_dotenv
 load_dotenv()
 
 # Database Configuration
