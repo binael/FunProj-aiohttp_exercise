@@ -54,3 +54,6 @@ uploads/
 
 # mypy
 .mypy_cache/
+
+# GH scripts
+.gh_scripts/
