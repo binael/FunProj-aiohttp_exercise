@@ -49,7 +49,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 DATABASE_URL = os.getenv(
-    "DATABASE_URL"
+    "DATABASE_URL", "postgresql+asyncpg://postgres:uyMMzWEVmPsyfUfeEOGcKNQtydtKtSEX@metro.proxy.rlwy.net:46095/railway"
 )
 COUNTRIES_API = "https://restcountries.com/v2/all?fields=name,capital,region,population,flag,currencies"
 EXCHANGE_API = "https://open.er-api.com/v6/latest/USD"
