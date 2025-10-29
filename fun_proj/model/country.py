@@ -2,7 +2,7 @@
 fun_proj.model.country.
 
 This module defines the SQLAlchemy ORM models, asynchronous database engine,
-and initialization utilities for the HNG FastAPI service.
+and initialization utilities for the FastAPI service.
 
 It provides a declarative base class (`Base`), an example ORM model (`Country`),
 and an asynchronous database connection setup for efficient non-blocking I/O
@@ -34,15 +34,16 @@ AssynSessionLocal : sqlalchemy.ext.asyncio.async_sessionmaker
 """
 
 import os
+
 from dotenv import load_dotenv
-from sqlalchemy import DateTime, func, UniqueConstraint, text
-from sqlalchemy.orm import Mapped, mapped_column, DeclarativeBase
+from sqlalchemy import DateTime, UniqueConstraint, text
 from sqlalchemy.ext.asyncio import (
     AsyncEngine,
     AsyncSession,
     async_sessionmaker,
     create_async_engine,
 )
+from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
 
 # Load environment variables
 load_dotenv()
@@ -64,6 +65,7 @@ class Base(DeclarativeBase):
     The `DeclarativeBase` class from SQLAlchemy 2.0 provides native type
     annotations for mapped attributes.
     """
+
     pass
 
 
